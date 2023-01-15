@@ -38,4 +38,19 @@ p2 {
     grid-template-rows: 50px 200px auto 50px;
 }
 
+.nav-bar {
 
+}
+
+.course-link, .about-us-link {
+
+}
+
+.get-started-button {
+
+}
+
+.logo-nav-bar {
+    height: 50px;
+    width: 50px;
+}
