@@ -36,21 +36,50 @@ p2 {
     display:grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 50px 200px auto 50px;
+    grid-template-areas: "navbar navbar navbar navbar"
+                        "infoarea infoarea cookingpicture cookingpicture"
 }
 
 .nav-bar {
+    width: 100%;
+    display: flex;
+    flex-basis: auto;
+    justify-content: space-evenly;
+    align-items: center;
+    grid-area: navbar;
 
 }
 
-.course-link, .about-us-link {
-
+a {
+    text-decoration: none;
+    color: black;
+    margin: 10px;
 }
 
 .get-started-button {
-
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    padding: 5px 20px;
 }
 
 .logo-nav-bar {
     height: 50px;
     width: 50px;
+}
+
+.about-online-cooking{ 
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: left;
+    grid-area: infoarea;
+}
+
+
+.about-online-cooking-picture {
+    grid-area: cookingpicture;
+    width: 100%;
+    height: 100%;
 }
