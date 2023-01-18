@@ -37,10 +37,12 @@ p2 {
     background-color: #F5F3EF;
     display:grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 50px auto auto 50px;
+    grid-template-rows: 50px auto auto auto 50px;
     grid-template-areas: "navbar navbar navbar"
                         "infoarea cookingpicture cookingpicture"
-                        "infocards infocards infocards"
+                        "cardcontainer cardcontainer cardcontainer"
+                        "cardcontainer cardcontainer cardcontainer"
+                        "footer footer footer"
 }
 
 .nav-bar {
@@ -92,12 +94,9 @@ a {
 }
 
 .card-container-grid {
-    display:grid;
-    grid-area: infocards;
-    grid-template-columns: repeat(3), 1fr;
-    grid-template-rows: auto, auto;
-        grid-template-areas: "infocard1 infocard2 infocard3"
-                             "info card4 .  ."
+    grid-area: cardcontainer;
+    display: flex;
+    flex-wrap: wrap;
 
 }
 
@@ -134,27 +133,4 @@ a {
     border-radius: 40px;
     text-align: center;
     grid-area: infocard2;
-}
-.info-card-3 {
-    display:flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 400px;
-    height: 324px;
-    background-color: white;
-    border-radius: 40px;
-    text-align: center;
-    grid-area: infocard3;
-}
-
-.info-card-4 {
-    display:flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 400px;
-    height: 324px;
-    background-color: white;
-    border-radius: 40px;
-    text-align: center;
-    grid-area: infocard4;
 }
