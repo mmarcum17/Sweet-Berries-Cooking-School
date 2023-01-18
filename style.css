@@ -37,10 +37,9 @@ p2 {
     background-color: #F5F3EF;
     display:grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 50px auto auto auto 50px;
+    grid-template-rows: 50px auto auto 70px;
     grid-template-areas: "navbar navbar navbar"
                         "infoarea cookingpicture cookingpicture"
-                        "cardcontainer cardcontainer cardcontainer"
                         "cardcontainer cardcontainer cardcontainer"
                         "footer footer footer"
 }
@@ -83,7 +82,12 @@ a {
     text-align: left;
     padding-right: 10px;
     padding-top: 20px;
+    margin-left: 100px;
     grid-area: infoarea;
+}
+
+.about-online-cooking h1 {
+    margin-bottom: 10px;
 }
 
 .about-online-cooking-picture {
@@ -91,22 +95,24 @@ a {
     width: 600px;
     height: 440px;
     padding-top: 20px;
+    margin-left: 150px;
 }
 
 .card-container-grid {
     grid-area: cardcontainer;
     display: flex;
     flex-wrap: wrap;
-
+    margin: 40px;
+    align-self: center;
 }
 
 .info-card-1 {
     display: flex;
-    width: 400px;
+    width: 350px;
     height:324px;
     background-color: #FEBD2F;
     border-radius: 40px;
-    grid-area: infocard1;
+    margin: 5px 20px;
 }
 
 .info-card-1 h2 {
@@ -117,8 +123,9 @@ a {
 
 .info-card-button {
     width: 140px;
+    height: 48px;
     border-radius: 50px;
-    border: 1px #DCDCDC;
+    border: 1px  solid #DCDCDC;
     background-color: white;
     font-family: 'Helvetica';
 }
@@ -127,10 +134,24 @@ a {
     display:flex;
     flex-direction: column;
     justify-content: space-around;
-    width: 400px;
+    width: 350px;
     height: 324px;
     background-color: white;
     border-radius: 40px;
-    text-align: center;
-    grid-area: infocard2;
+    text-align: left;
+    margin: 5px 20px;
+    padding: 20px;
+}
+
+.footer-website {
+    background-color:#FEBD2F;
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+
+}
+
+#logo-footer {
+    padding-bottom: 20px;
+    height: 40px;
 }
