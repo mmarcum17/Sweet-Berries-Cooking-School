@@ -155,3 +155,13 @@ a {
     padding-bottom: 20px;
     height: 40px;
 }
+
+@media (max-width:768px)
+.main-container .navbar  .footer-website .about-online-cooking .about-online-cooking-picture{
+    grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 450px)
+.main-container .navbar  .footer-website .about-online-cooking .about-online-cooking-picture {
+    grid-template-columns: repeat(1, 1fr);
+}
