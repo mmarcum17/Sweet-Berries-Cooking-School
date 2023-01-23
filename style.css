@@ -45,13 +45,18 @@ p2 {
 }
 
 .nav-bar {
-    width: 100%;
     display: flex;
-    flex-basis: auto;
-    justify-content: space-around;
+    /* /flex-basis: auto; */
+    justify-content: space-between;
     align-items: center;
     grid-area: navbar;
+    margin: 0px 20px;
+}
 
+.nav-link-text{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 a {
@@ -78,11 +83,11 @@ a {
 .about-online-cooking{ 
     display: flex;
     flex-direction: column;
-    align-content: center;
+    align-items: center;
+    min-width: 100%;
+    justify-content: center;
     text-align: left;
-    padding-right: 10px;
-    padding-top: 20px;
-    margin-left: 100px;
+    padding: 20px;
     grid-area: infoarea;
 }
 
@@ -92,24 +97,27 @@ a {
 
 .about-online-cooking-picture {
     grid-area: cookingpicture;
-    width: 600px;
+    width: 100%;
     height: 440px;
-    padding-top: 20px;
-    margin-left: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px
 }
 
 .card-container-grid {
     grid-area: cardcontainer;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* flex-wrap: wrap; */
     margin: 40px;
     align-self: center;
 }
 
 .info-card-1 {
     display: flex;
-    width: 350px;
-    height:324px;
+    /* width: 350px;
+    height:324px; */
     background-color: #FEBD2F;
     border-radius: 40px;
     margin: 5px 20px;
@@ -130,12 +138,21 @@ a {
     font-family: 'Helvetica';
 }
 
+.knife-icon {
+    height: 60px;
+    width:60px;
+    position: absolute;
+    right: 20px;
+    top: -40px;
+}
+
 .info-card-2 {
+    position:relative;
     display:flex;
     flex-direction: column;
     justify-content: space-around;
-    width: 350px;
-    height: 324px;
+    /* width: 350px;
+    height:324px; */
     background-color: white;
     border-radius: 40px;
     text-align: left;
@@ -148,6 +165,7 @@ a {
     display: flex;
     justify-content: center;
     padding-top: 30px;
+    grid-area: footer;
 
 }
 
@@ -157,11 +175,26 @@ a {
 }
 
 @media (max-width:768px)
-.main-container .navbar  .footer-website .about-online-cooking .about-online-cooking-picture{
-    grid-template-columns: repeat(2, 1fr);
+{
+    .main-container {
+    grid-template-rows: 50px auto auto auto 70px;
+    grid-template-areas: "navbar navbar navbar"
+                        "infoarea infoarea infoarea"
+                        "cookingpicture cookingpicture cookingpicture"
+                        "cardcontainer cardcontainer cardcontainer"
+                        "footer footer footer"
+}
+.card-container-grid{
+        grid-template-columns: repeat(2, 1fr);
+    
+}
+
+.about-online-cooking{ 
+    text-align:center;
+}
 }
 
 @media (max-width: 450px)
-.main-container .navbar  .footer-website .about-online-cooking .about-online-cooking-picture {
-    grid-template-columns: repeat(1, 1fr);
+{.main-container .navbar  .footer-website .about-online-cooking .about-online-cooking-picture {
+    grid-template-columns: repeat(1, 1fr);}
 }
