@@ -125,8 +125,7 @@ a {
 
 .info-card-1 h2 {
     text-align: left;
-    margin-top: 25%;
-    margin-left: 20px;
+    margin: 20px;
 }
 
 .info-card-button {
@@ -146,13 +145,45 @@ a {
     top: -40px;
 }
 
+.pot-icon {
+    height: 60px;
+    width:60px;
+    position: absolute;
+    right: 20px;
+    top: -40px;
+}
+
+.clipboard-icon {
+    height: 60px;
+    width:60px;
+    position: absolute;
+    right: 20px;
+    top: -40px;
+}
+
+.leaf-icon {
+    height: 60px;
+    width:60px;
+    position: absolute;
+    right: 20px;
+    top: -40px;
+}
+
+.burger-icon {
+    height: 60px;
+    width:60px;
+    position: absolute;
+    right: 20px;
+    top: -40px;
+}
+
+
+
 .info-card-2 {
     position:relative;
     display:flex;
     flex-direction: column;
     justify-content: space-around;
-    /* width: 350px;
-    height:324px; */
     background-color: white;
     border-radius: 40px;
     text-align: left;
@@ -195,6 +226,20 @@ a {
 }
 
 @media (max-width: 450px)
-{.main-container .navbar  .footer-website .about-online-cooking .about-online-cooking-picture {
-    grid-template-columns: repeat(1, 1fr);}
+{.main-container {
+    grid-template-rows: 50px auto auto auto 70px;
+    grid-template-areas: "navbar navbar navbar"
+                        "infoarea infoarea infoarea"
+                        "cookingpicture cookingpicture cookingpicture"
+                        "cardcontainer cardcontainer cardcontainer"
+                        "footer footer footer"
+}
+.card-container-grid{
+        grid-template-columns: repeat(1, 1fr);
+    
+}
+
+.about-online-cooking{ 
+    text-align:center;
+}
 }
