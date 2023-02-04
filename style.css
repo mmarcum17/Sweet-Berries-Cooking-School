@@ -1,3 +1,4 @@
+/* The code has failed both HTML and CSS validators. */
 * {
     margin: 0;
     padding: 0;
@@ -33,6 +34,7 @@ p2 {
     font-size: 14px;
 }
 
+/* Great job on using grid-template-areas!  */
 .main-container {
     background-color: #F5F3EF;
     display:grid;
@@ -95,6 +97,7 @@ a {
     margin-bottom: 10px;
 }
 
+/* Always try to stay away from setting any heights, usually it results in problems when it comes to making the webpage responsive */
 .about-online-cooking-picture {
     grid-area: cookingpicture;
     width: 100%;
@@ -112,7 +115,8 @@ a {
     margin: 40px;
     align-self: center;
 }
-
+/* The cards are a bit long horizonatally and not looking similar to the Figma file.
+To make the cards more square like, you can give them a width:80%; and margin: 0px auto; */
 .info-card-1 {
     display: flex;
     background-color: #FEBD2F;
@@ -120,11 +124,15 @@ a {
     margin: 20px 20px;
 }
 
+/* Making this a flexbox will allow you to make the card looking like the card in the Figma file.
+It will allow you to horizontally align the image to the center of the card */
 .info-card-1 h2 {
     text-align: left;
     margin: 20px;
 }
 
+/* Always try your best to stay away from using pixels (px) and use more responsive units such as percentages (%) instead.
+This will allow you to make your webpage more responsive a lot faster. */
 .info-card-button {
     width: 140px;
     height: 48px;
@@ -134,6 +142,8 @@ a {
     font-family: 'Helvetica';
 }
 
+/* No need to make many classes that do the same thing. Make one class and give it to the elements class.
+This is hard to maintain because if we want to change something, we will have to change it for all of them. */
 .knife-icon {
     height: 60px;
     width:60px;
@@ -202,6 +212,7 @@ a {
     height: 40px;
 }
 
+/* Beautiful work on making most of the website responsive */
 @media (max-width:768px)
 {
     .main-container {
@@ -223,7 +234,9 @@ a {
 }
 
 @media (max-width: 450px)
-{.main-container {
+{
+    /* The functional hamburger menu has not been implemented for mobile screen sizes. */
+    .main-container {
     grid-template-rows: 50px auto auto auto auto auto auto 70px;
     grid-template-areas: "navbar navbar navbar"
                         "infoarea infoarea infoarea"
